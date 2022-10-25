@@ -7,7 +7,7 @@
 body{
     margin-top: 70px;
     color: black;
-    background-color: rgb(168, 168, 168);
+    background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
