@@ -14,7 +14,6 @@ body{
 }
 
 header{
-    background-color: beige;
     position: fixed;
     top: 0;
     width: 100%;
@@ -29,8 +28,8 @@ header{
 } 
 
 nav {
-    background-color: #ffffff;
-    height: 65px;
+    background-color: white;
+    height: 70px;
 }
 
 #menuToggle {
@@ -201,7 +200,7 @@ input[type=submit]:hover {
 
 /* Footer */
 footer {
-    background-color: beige;
+    background-color: white;
     bottom: 0;
     width: 100%;
     margin-top: auto;
