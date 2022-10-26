@@ -96,7 +96,7 @@ nav {
 #menu
 {
     position: absolute;
-    width: 50vw;
+     width: 50vw;
     height: 100vh;
     box-shadow: 0 0 10px #85888C;
     margin: -50px 0 0 -50px;
@@ -128,7 +128,61 @@ nav {
 }
 
 .active {
-    color: gray;
+    color: gray !important; 
+}
+
+@media only screen and (min-width: 840px) {
+    .header__logo{
+        float: left;
+        height: 30px;
+        margin: 20px -5px 15px 40px;
+    } 
+    
+    #menuToggle
+    {
+        display: block;
+        top: 0;
+    }
+
+    #menuToggle input
+    {
+        display: none;
+    }
+    
+    #menuToggle span
+    {
+        display: none;
+    }
+    
+    #menu
+    {
+        display: flex;
+        justify-content: space-around;
+        right: 0;
+        width: 70vw;
+        height: 50px;
+        list-style: none;
+        overflow: hidden;
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+        padding-top: 0;
+        background-color: white;
+        transform-origin: none;
+        transform: none;
+        transition: none;
+        list-style: none;
+    }
+    
+    
+    #menu li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 15px 15px 15px 15px;
+        text-decoration: none;
+    }
+    
 }
 
 .inicio__grid
@@ -153,6 +207,17 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contacto */
 .contact-form{
@@ -204,7 +269,6 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: auto;
-    /* height: 90px; */
 }
 
 .footer-links{
