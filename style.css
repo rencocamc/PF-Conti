@@ -96,7 +96,7 @@ nav {
 #menu
 {
     position: absolute;
-     width: 50vw;
+    width: 50vw;
     height: 100vh;
     box-shadow: 0 0 10px #85888C;
     margin: -50px 0 0 -50px;
@@ -128,7 +128,7 @@ nav {
 }
 
 .active {
-    color: gray !important; 
+    color: gray !important;
 }
 
 @media only screen and (min-width: 840px) {
@@ -165,7 +165,7 @@ nav {
         overflow: hidden;
         box-shadow: none;
         margin: 0;
-        padding: 20px;
+        padding: 10px 0;
         padding-top: 0;
         background-color: white;
         transform-origin: none;
@@ -174,15 +174,28 @@ nav {
         list-style: none;
     }
     
+    #menu li {
+        padding : 0;
+        margin-top: 10px;
+    }
     
     #menu li a {
         display: block;
         color: black;
         text-align: center;
-        padding: 15px 15px 15px 15px;
+        margin: 5px;
+        padding: 10px;
         text-decoration: none;
     }
-    
+
+    #menu li a:hover{
+        background-color: rgb(228, 228, 228);
+        border-radius: 12px;
+    }
+
+    .active {
+        background-color: white !important; 
+    }
 }
 
 .inicio__grid
@@ -206,9 +219,17 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: aparecer 3s;
 }
 
-
+@keyframes aparecer {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
 
 
 
