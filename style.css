@@ -367,10 +367,11 @@ nav {
 
 /* Contacto */
 .contact-form{
-    background-color: beige;
-    margin: 50px 250px;
+    background-color: rgb(236, 236, 236);
     padding: 50px;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 .contact-form h1{
@@ -408,7 +409,11 @@ input[type=submit]:hover {
     background-color: #3787c9;
 }
 
-
+.contacto__botonenviar {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
 /* Footer */
 footer {
     background-color: white;
