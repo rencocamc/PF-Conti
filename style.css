@@ -211,8 +211,8 @@ nav {
 .flex-container
 {
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .img1{
@@ -220,6 +220,17 @@ nav {
     height: 100%;
     object-fit: cover;
     animation: aparecer 2s ease-out;
+}
+
+.img2{
+    margin: 10px 0;
+    width: 50%;
+    object-fit: cover;
+    animation: aparecer 2s ease-out;
+}
+
+.inicio__info{
+    padding: 10px 20px 20px 20px;
 }
 
 @keyframes aparecer {
