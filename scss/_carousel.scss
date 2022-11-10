@@ -37,14 +37,15 @@
     opacity: 0;
     -webkit-transition: opacity 0.6s ease-out;
     transition: opacity 0.6s ease-out;
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
 }
 
-.carousel-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
+
 
 .carousel-control {
     background: rgba(0, 0, 0, 0.28);
@@ -64,6 +65,10 @@
     text-align: center;
     width: 40px;
     z-index: 10;
+    &:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+    }
 }
 
 .carousel-control.prev {
@@ -72,11 +77,6 @@
 
 .carousel-control.next {
     right: 2%;
-}
-
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
 }
 
 #carousel-1:checked ~ .control-1,
@@ -95,11 +95,10 @@
     right: 0;
     text-align: center;
     z-index: 10;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    margin: 0 5px;
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
 }
 
 .carousel-bullet {
@@ -107,10 +106,9 @@
     cursor: pointer;
     display: block;
     font-size: 35px;
-}
-
-.carousel-bullet:hover {
-    color: #aaaaaa;
+    &:hover {
+        color: #aaaaaa;
+    }
 }
 
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
