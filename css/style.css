@@ -3,7 +3,8 @@ header {
   top: 0;
   width: 100%;
   text-align: center;
-  height: 70px; }
+  height: 70px;
+  z-index: 20; }
 
 .header__logo {
   float: right;
@@ -189,99 +190,6 @@ input[type=submit] {
   justify-content: center;
   vertical-align: middle; }
 
-* {
-  font-family: 'Monserrat', sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-body {
-  margin-top: 70px;
-  color: black;
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; }
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-@media only screen and (min-width: 900px) {
-  .flex-container {
-    padding: 30px;
-    flex-wrap: nowrap; } }
-
-.inicio__grid {
-  display: grid;
-  grid-template-columns: repeat(1, auto);
-  align-content: stretch;
-  gap: 10px;
-  padding: 0.5vw;
-  margin-top: 5vh; }
-
-.primera-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: aparecer 2s ease-out; }
-
-.logo {
-  margin: 20px 0;
-  width: 50vw;
-  object-fit: cover;
-  animation: aparecer 2s ease-out; }
-
-.ryc__logo {
-  margin: 30px 0 10px 0;
-  width: 50%;
-  object-fit: cover;
-  animation: aparecer 2s ease-out; }
-
-.primera-info {
-  display: inline-block;
-  padding: 15px 30px 25px 30px;
-  font-size: large; }
-
-@media only screen and (min-width: 900px) {
-  .primera-img {
-    justify-content: center;
-    height: 70vh;
-    object-fit: cover;
-    object-position: 0 -20vh;
-    animation: aparecer 2s ease-out; }
-  .logo {
-    margin: 100px 100px;
-    width: 50vw;
-    object-fit: cover;
-    animation: aparecer 2s ease-out; }
-  .ryc__logo {
-    margin: 100px 100px;
-    width: 50%;
-    object-fit: cover;
-    animation: aparecer 2s ease-out; }
-  .primera-info {
-    margin: auto;
-    display: inline-block;
-    padding: 15px 30px 25px 30px;
-    font-size: large;
-    font-size: x-large; } }
-
-.eventos__grid {
-  display: grid;
-  grid-template-columns: repeat(1, auto);
-  align-content: stretch;
-  gap: 10px;
-  padding: 0.5vw;
-  margin-top: 5vh; }
-
-@keyframes aparecer {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .carousel {
   position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
@@ -382,3 +290,96 @@ body {
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
   color: #428bca; }
+
+* {
+  font-family: 'Monserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  margin-top: 70px;
+  color: black;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+@media only screen and (min-width: 900px) {
+  .flex-container {
+    padding: 30px;
+    flex-wrap: nowrap; } }
+
+.inicio__grid {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  align-content: stretch;
+  gap: 10px;
+  padding: 0.5vw;
+  margin-top: 5vh; }
+
+.primera-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: aparecer 2s ease-out; }
+
+.logo {
+  margin: 20px 0;
+  width: 50vw;
+  object-fit: cover;
+  animation: aparecer 2s ease-out; }
+
+.ryc__logo {
+  margin: 30px 0 10px 0;
+  width: 50%;
+  object-fit: cover;
+  animation: aparecer 2s ease-out; }
+
+.primera-info {
+  display: inline-block;
+  padding: 15px 30px 25px 30px;
+  font-size: large; }
+
+@media only screen and (min-width: 900px) {
+  .primera-img {
+    justify-content: center;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 0 -20vh;
+    animation: aparecer 2s ease-out; }
+  .logo {
+    margin: 100px 100px;
+    width: 50vw;
+    object-fit: cover;
+    animation: aparecer 2s ease-out; }
+  .ryc__logo {
+    margin: 100px 100px;
+    width: 50%;
+    object-fit: cover;
+    animation: aparecer 2s ease-out; }
+  .primera-info {
+    margin: auto;
+    display: inline-block;
+    padding: 15px 30px 25px 30px;
+    font-size: large;
+    font-size: x-large; } }
+
+.eventos__grid {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  align-content: stretch;
+  gap: 10px;
+  padding: 0.5vw;
+  margin-top: 5vh; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
