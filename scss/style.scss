@@ -20,17 +20,11 @@ body{
     flex-direction: column;
 }
 
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .inicio__bkgd-img1{
     background-image: url("../assets/carnepapas.jpg");
     min-height: 50vh;
-    background-size: 180%;
-    background-position-y: 10%;
+    background-position: center;
+    background-size: cover;
 }
 
 .eventos__bkgd-img1{
@@ -39,6 +33,19 @@ body{
     background-size: 180%;
     background-position-y: 10%;
 }
+
+@media only screen and (min-width: 900px) {
+    .parallax {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .inicio__bkgd-img1{
+        @extend .parallax;
+        min-height: 90vh;
+    }
+}
+
 
 .logo{
     margin: 20px 0;
