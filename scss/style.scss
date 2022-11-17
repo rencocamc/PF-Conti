@@ -20,39 +20,24 @@ body{
     flex-direction: column;
 }
 
-.flex-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-@media only screen and (min-width: 900px) {
-    .flex-container
-    {
-        padding: 30px;
-        flex-wrap: nowrap;
-    }
-}
-
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.inicio__img1--parallax{
-    @extend .parallax;
+.inicio__bkgd-img1{
     background-image: url("../assets/carnepapas.jpg");
-    min-height: 80vh;
+    min-height: 50vh;
+    background-size: 180%;
+    background-position-y: 10%;
 }
 
-.primera-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: aparecer 2s ease-out;
+.eventos__bkgd-img1{
+    background-image: url("../assets/armour7bn.jpeg");
+    min-height: 50vh;
+    background-size: 180%;
+    background-position-y: 10%;
 }
 
 .logo{
@@ -75,46 +60,6 @@ body{
     font-size: large;
 }
 
-@media only screen and (min-width: 900px) {
-    .primera-img{
-        justify-content: center;
-        height: 70vh;
-        object-fit: cover;
-        object-position: 0 -20vh;
-        animation: aparecer 2s ease-out;
-    }
-
-    .logo{
-        margin: 100px 100px;
-        width: 50vw;
-        object-fit: cover;
-        animation: aparecer 2s ease-out;
-    }
-    
-    .ryc__logo{
-        margin: 100px 100px;
-        width: 50%;
-        object-fit: cover;
-        animation: aparecer 2s ease-out;
-    }
-    
-    .primera-info{
-        margin: auto;
-        display: inline-block;
-        padding: 15px 30px 25px 30px;
-        font-size: large;
-        font-size:x-large;
-    }
-}
-.eventos__grid
-{
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    align-content: stretch;
-    gap: 10px;
-    padding: 0.5vw;
-    margin-top: 5vh;
-}
 
 @keyframes aparecer {
     0% {
