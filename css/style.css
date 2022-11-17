@@ -311,16 +311,15 @@ body {
     padding: 30px;
     flex-wrap: nowrap; } }
 
-.parallax {
-  /* The image used */
-  background-image: url("../assets/carnepapas.jpg");
-  /* Set a specific height */
-  min-height: 80vh;
-  /* Create the parallax scrolling effect */
+.parallax, .inicio__img1--parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.inicio__img1--parallax {
+  background-image: url("../assets/carnepapas.jpg");
+  min-height: 80vh; }
 
 .primera-img {
   width: 100%;
