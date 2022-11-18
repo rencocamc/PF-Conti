@@ -301,23 +301,37 @@ body {
   display: flex;
   flex-direction: column; }
 
-.inicio__bkgd-img1 {
-  background-image: url("../assets/carnepapas.jpg");
+.bkgd-img, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2, .ryc__bkgd-img1, .ryc__bkgd-img2 {
   min-height: 50vh;
   background-position: center;
   background-size: cover; }
 
+.inicio__bkgd-img1 {
+  background-image: url("../assets/carnepapas.jpg"); }
+
 .eventos__bkgd-img1 {
-  background-image: url("../assets/armour7bn.jpeg");
-  min-height: 50vh;
-  background-size: 180%;
-  background-position-y: 10%; }
+  background-image: url("../assets/armour7bn.jpeg"); }
+
+.eventos__bkgd-img2 {
+  background-image: url("../assets/novios.jpg");
+  background-position-x: 80%; }
+
+.ryc__bkgd-img1 {
+  background-image: url("../assets/restbn.jpg"); }
+
+.ryc__bkgd-img2 {
+  background-image: url("../assets/cafe2.jpg");
+  background-position: bottom; }
 
 @media only screen and (min-width: 900px) {
-  .parallax, .inicio__bkgd-img1 {
+  .parallax, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2 {
     background-attachment: fixed;
     background-repeat: no-repeat; }
   .inicio__bkgd-img1 {
+    min-height: 90vh; }
+  .eventos__bkgd-img1 {
+    min-height: 90vh; }
+  .eventos__bkgd-img2 {
     min-height: 90vh; } }
 
 .logo {
