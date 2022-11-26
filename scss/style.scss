@@ -28,39 +28,74 @@ body{
 
 // Inicio
 
+.inicio__logo{
+    margin-top: -10%;
+    width: 100%;
+    object-fit: contain;
+}
+
 .inicio__bkgd-img1{
     @extend .bkgd-img;
     background-image: url("../assets/fondo.jpg");
 }
 
 .inicio__card-deck{
-    margin-top: -40vh;
+    margin-top: -20vh;
+    margin-bottom: 5vh;
 }
 
 .inicio__card{
     margin: 60px auto;
-    min-height: 50vh;
-    border-radius: 3%;
+    width: 80%;
+    height: 50vh;
+    border-radius: 5%;
     box-shadow: 0px 30px 40px -20px;
     background-size: cover;
 }
 
 .inicio__card-1{
     @extend .inicio__card;
-    background-image: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0) 71%),url("../assets/novios.jpg");
+    background-image: url("../assets/card1.jpg");
     background-position-x: 70%;
 }
 
 .inicio__card-2{
     @extend .inicio__card;
-    background-image: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0) 71%),url("../assets/barista.jpg");
-    background-position-x: 50%;
+    background-image: url("../assets/card2.jpg");
+    background-position: center;
 }
 
 .inicio__card-3{
     @extend .inicio__card;
-    background-image: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0) 71%),url("../assets/novios.jpg");
+    background-image: url("../assets/card3.jpg");
     background-position-x: 70%;
+}
+
+@media only screen and (min-width: 900px) {
+
+    .inicio__logo{
+        margin-top: -8%;
+        width: 80%;
+    }
+
+    .inicio__card-deck{
+        margin-top: -30vh;
+        margin-bottom: 10vh;
+        justify-content: space-evenly;
+    }
+
+    .inicio__card{
+        max-width: 25%;
+        height: 65vh;
+        position: relative;
+        transition: all .5s ease-in-out;
+        h2{
+            font-size: 25px;
+        }
+        &:hover{
+            top: -20px;
+        }
+    }
 }
 
 //Eventos
@@ -90,25 +125,53 @@ body{
     background-position: bottom;
 }
 
+//Nosotros
+
+.nosotros__bkgd-img1{
+    @extend .bkgd-img;
+    background-image: url("../assets/armour2.jpg");
+    background-position-x: 80%;
+}
+
+.nosotros__bkgd-img2{
+    @extend .bkgd-img;
+    background-image: url("../assets/barra.jpg");
+    background-position: top;
+}
+
 @media only screen and (min-width: 900px) {
     .parallax {
         background-attachment: fixed;
         background-repeat: no-repeat;
+        min-height: 90vh;
     }
 
     .inicio__bkgd-img1{
         @extend .parallax;
-        min-height: 90vh;
     }
 
     .eventos__bkgd-img1{
         @extend .parallax;
-        min-height: 90vh;
     }
 
     .eventos__bkgd-img2{
         @extend .parallax;
-        min-height: 90vh;
+    }
+
+    .ryc__bkgd-img1{
+        @extend .parallax;
+    }
+
+    .ryc__bkgd-img2{
+        @extend .parallax;
+    }
+
+    .nosotros__bkgd-img1{
+        @extend .parallax;
+    }
+
+    .nosotros__bkgd-img2{
+        @extend .parallax;
     }
 }
 
@@ -119,6 +182,10 @@ body{
     100% {
     opacity: 1;
     }
+}
+
+.aparecer{
+    animation: aparecer 1s ease-in-out;
 }
 
 .mapouter {
@@ -141,6 +208,19 @@ body{
     height: 30vh!important;
 }
 
+@media only screen and (min-width: 900px){
+    .mapouter {
+        height:60vh;
+    }
+
+    .gmap_canvas {
+        height:60vh;
+    }
+    
+    .gmap_iframe { 
+        height: 60vh!important;
+    }
+}
 
 .whatsapp {
     position:fixed;
@@ -165,5 +245,15 @@ body{
     .whatsapp {
         bottom:60px;
         right:40px;
+    }
+}
+
+.bg-sec{
+    background-color:  map-get($colores, secundario);
+}
+
+@media only screen and (min-width: 900px) {
+    .vh80{
+        min-height: 80vh;
     }
 }

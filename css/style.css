@@ -301,35 +301,60 @@ body {
   display: flex;
   flex-direction: column; }
 
-.bkgd-img, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2, .ryc__bkgd-img1, .ryc__bkgd-img2 {
+.bkgd-img, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2, .ryc__bkgd-img1, .ryc__bkgd-img2, .nosotros__bkgd-img1, .nosotros__bkgd-img2 {
   min-height: 50vh;
   background-position: center;
   background-size: cover; }
+
+.inicio__logo {
+  margin-top: -10%;
+  width: 100%;
+  object-fit: contain; }
 
 .inicio__bkgd-img1 {
   background-image: url("../assets/fondo.jpg"); }
 
 .inicio__card-deck {
-  margin-top: -40vh; }
+  margin-top: -20vh;
+  margin-bottom: 5vh; }
 
 .inicio__card, .inicio__card-1, .inicio__card-2, .inicio__card-3 {
   margin: 60px auto;
-  min-height: 50vh;
-  border-radius: 3%;
+  width: 80%;
+  height: 50vh;
+  border-radius: 5%;
   box-shadow: 0px 30px 40px -20px;
   background-size: cover; }
 
 .inicio__card-1 {
-  background-image: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 71%), url("../assets/novios.jpg");
+  background-image: url("../assets/card1.jpg");
   background-position-x: 70%; }
 
 .inicio__card-2 {
-  background-image: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 71%), url("../assets/barista.jpg");
-  background-position-x: 50%; }
+  background-image: url("../assets/card2.jpg");
+  background-position: center; }
 
 .inicio__card-3 {
-  background-image: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 71%), url("../assets/novios.jpg");
+  background-image: url("../assets/card3.jpg");
   background-position-x: 70%; }
+
+@media only screen and (min-width: 900px) {
+  .inicio__logo {
+    margin-top: -8%;
+    width: 80%; }
+  .inicio__card-deck {
+    margin-top: -30vh;
+    margin-bottom: 10vh;
+    justify-content: space-evenly; }
+  .inicio__card, .inicio__card-1, .inicio__card-2, .inicio__card-3 {
+    max-width: 25%;
+    height: 65vh;
+    position: relative;
+    transition: all .5s ease-in-out; }
+    .inicio__card h2, .inicio__card-1 h2, .inicio__card-2 h2, .inicio__card-3 h2 {
+      font-size: 25px; }
+    .inicio__card:hover, .inicio__card-1:hover, .inicio__card-2:hover, .inicio__card-3:hover {
+      top: -20px; } }
 
 .eventos__bkgd-img1 {
   background-image: url("../assets/armour7bn.jpeg"); }
@@ -346,15 +371,18 @@ body {
   background-image: url("../assets/cafe2.jpg");
   background-position: bottom; }
 
+.nosotros__bkgd-img1 {
+  background-image: url("../assets/armour2.jpg");
+  background-position-x: 80%; }
+
+.nosotros__bkgd-img2 {
+  background-image: url("../assets/barra.jpg");
+  background-position: top; }
+
 @media only screen and (min-width: 900px) {
-  .parallax, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2 {
+  .parallax, .inicio__bkgd-img1, .eventos__bkgd-img1, .eventos__bkgd-img2, .ryc__bkgd-img1, .ryc__bkgd-img2, .nosotros__bkgd-img1, .nosotros__bkgd-img2 {
     background-attachment: fixed;
-    background-repeat: no-repeat; }
-  .inicio__bkgd-img1 {
-    min-height: 90vh; }
-  .eventos__bkgd-img1 {
-    min-height: 90vh; }
-  .eventos__bkgd-img2 {
+    background-repeat: no-repeat;
     min-height: 90vh; } }
 
 @keyframes aparecer {
@@ -362,6 +390,9 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.aparecer {
+  animation: aparecer 1s ease-in-out; }
 
 .mapouter {
   position: relative;
@@ -379,6 +410,14 @@ body {
 .gmap_iframe {
   width: 100%;
   height: 30vh !important; }
+
+@media only screen and (min-width: 900px) {
+  .mapouter {
+    height: 60vh; }
+  .gmap_canvas {
+    height: 60vh; }
+  .gmap_iframe {
+    height: 60vh !important; } }
 
 .whatsapp {
   position: fixed;
@@ -401,3 +440,10 @@ body {
   .whatsapp {
     bottom: 60px;
     right: 40px; } }
+
+.bg-sec {
+  background-color: black; }
+
+@media only screen and (min-width: 900px) {
+  .vh80 {
+    min-height: 80vh; } }
